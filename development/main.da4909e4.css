@@ -561,6 +561,10 @@ Navbar
   display: none;
 }
 
+.nav-links li {
+  list-style: none;
+}
+
 .toggle-nav {
   background: var(--clr-primary-5);
   border-color: transparent;

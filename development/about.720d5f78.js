@@ -117,79 +117,126 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
+})({"../src/utils.js":[function(require,module,exports) {
+"use strict";
 
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
-  }
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.setStorageItem = exports.getStorageItem = exports.formatPrice = exports.getElement = exports.singleProductUrl = exports.allProductsUrl = void 0;
+//   ATTENTION!!!!!!!!!!!
+//   I SWITCHED TO PERMANENT DOMAIN
+//   DATA IS THE SAME JUST A DIFFERENT URL,
+//   DOES NOT AFFECT PROJECT FUNCTIONALITY
+var allProductsUrl = 'https://course-api.com/javascript-store-products'; // temporary single product
+// 'https://course-api.com/javascript-store-single-product?id=rec43w3ipXvP28vog'
 
-  return bundleURL;
-}
+exports.allProductsUrl = allProductsUrl;
+var singleProductUrl = 'https://course-api.com/javascript-store-single-product';
+exports.singleProductUrl = singleProductUrl;
 
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
+var getElement = function getElement(selection) {
+  var element = document.querySelector(selection);
+  if (element) return element;
+  throw new Error("Please check \"".concat(selection, "\" selector, no such element exist"));
+};
 
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
+exports.getElement = getElement;
 
-  return '/';
-}
+var formatPrice = function formatPrice() {};
 
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
-}
+exports.formatPrice = formatPrice;
 
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"../node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
+var getStorageItem = function getStorageItem() {};
 
-function updateLink(link) {
-  var newLink = link.cloneNode();
+exports.getStorageItem = getStorageItem;
 
-  newLink.onload = function () {
-    link.remove();
-  };
+var setStorageItem = function setStorageItem() {};
 
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
+exports.setStorageItem = setStorageItem;
+},{}],"../src/toggleSidebar.js":[function(require,module,exports) {
+"use strict";
 
-var cssTimeout = null;
+var _utils = require("./utils.js");
+},{"./utils.js":"../src/utils.js"}],"../src/cart/toggleCart.js":[function(require,module,exports) {
+"use strict";
 
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.openCart = void 0;
 
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
+var _utils = require("../utils.js");
 
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
-    }
+var openCart = function openCart() {};
 
-    cssTimeout = null;
-  }, 50);
-}
+exports.openCart = openCart;
+},{"../utils.js":"../src/utils.js"}],"../src/store.js":[function(require,module,exports) {
+"use strict";
 
-module.exports = reloadCSS;
-},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../src/scss/app.scss":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.findProduct = exports.setupStore = exports.store = void 0;
 
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+var _utils = require("./utils.js");
+
+var store = [];
+exports.store = store;
+
+var setupStore = function setupStore() {};
+
+exports.setupStore = setupStore;
+
+var findProduct = function findProduct() {};
+
+exports.findProduct = findProduct;
+},{"./utils.js":"../src/utils.js"}],"../src/cart/addToCartDOM.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _utils = require("../utils.js");
+
+var addToCartDOM = function addToCartDOM() {};
+
+var _default = addToCartDOM;
+exports.default = _default;
+},{"../utils.js":"../src/utils.js"}],"../src/cart/setupCart.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.addToCart = void 0;
+
+var _utils = require("../utils.js");
+
+var _toggleCart = require("./toggleCart.js");
+
+var _store = require("../store.js");
+
+var _addToCartDOM = _interopRequireDefault(require("./addToCartDOM.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// import
+// set items
+var addToCart = function addToCart() {};
+
+exports.addToCart = addToCart;
+},{"../utils.js":"../src/utils.js","./toggleCart.js":"../src/cart/toggleCart.js","../store.js":"../src/store.js","./addToCartDOM.js":"../src/cart/addToCartDOM.js"}],"../src/pages/about.js":[function(require,module,exports) {
+"use strict";
+
+require("../toggleSidebar.js");
+
+require("../cart/toggleCart.js");
+
+require("../cart/setupCart.js");
+},{"../toggleSidebar.js":"../src/toggleSidebar.js","../cart/toggleCart.js":"../src/cart/toggleCart.js","../cart/setupCart.js":"../src/cart/setupCart.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -393,5 +440,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
-//# sourceMappingURL=/app.3525348d.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","../src/pages/about.js"], null)
+//# sourceMappingURL=/about.720d5f78.js.map
