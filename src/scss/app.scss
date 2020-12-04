@@ -254,6 +254,7 @@ Navbar
     top: 50%;
     left: 65%;
     transform: translate(-50%, -50%);
+    width: 350px;
   }
   .toggle-nav {
     display: none;
@@ -297,8 +298,8 @@ Hero
 .hero {
   min-height: 100vh;
   margin-top: -6rem;
-  // background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-  //   url(../../images/main-bcg.jpeg) center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
+    url(../assets/main-bg.jpg) center/cover;
   display: grid;
   place-items: center;
   color: var(--clr-white);
