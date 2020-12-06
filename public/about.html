@@ -15,7 +15,126 @@
   </head>
 
   <body>
-    <h2>about page</h2>
+    <!-- navbar -->
+    <nav class="navbar page">
+      <div class="nav-center">
+        <!-- links -->
+        <div>
+          <button class="toggle-nav">
+            <i class="fas fa-bars black-nav"></i>
+          </button>
+          <div class="nav-links">
+            <li>
+              <a href="index.html" class="nav-link">home</a>
+            </li>
+            <li>
+              <a href="about.html" class="nav-link">about</a>
+            </li>
+            <li>
+              <a href="products.html" class="nav-link">products</a>
+            </li>
+          </div>
+        </div>
+        <!-- logo -->
+        <!-- <img src="../src/assets/logo-white.png" alt="logo" class="nav-logo" /> -->
+        <!-- cart icon -->
+        <div class="toggle-container">
+          <button class="toggle-cart">
+            <i class="fas fa-shopping-cart"></i>
+          </button>
+          <span class="cart-item-count">10</span>
+        </div>
+      </div>
+    </nav>
+    <!-- hero -->
+    <section class="page-hero">
+      <div class="section-center">
+        <h3 class="page-hero-title">Home | About</h3>
+      </div>
+    </section>
+    <!-- SideBar -->
+    <div class="sidebar-overlay">
+      <aside class="sidebar">
+        <!-- close -->
+        <button class="sidebar-close">
+          <i class="fas fa-times"></i>
+        </button>
+        <!-- links -->
+        <ul class="sidebar-links">
+          <li>
+            <a href="index.html" class="sidebar-link"> home</a>
+          </li>
+          <li>
+            <a href="about.html" class="sidebar-link"> about</a>
+          </li>
+          <li>
+            <a href="./products.html" class="sidebar-link"> products</a>
+          </li>
+        </ul>
+      </aside>
+    </div>
+    <!-- Cart -->
+    <div class="cart-overlay">
+      <aside class="cart">
+        <button class="cart-close">
+          <i class="fas fa-times"></i>
+        </button>
+        <header>
+          <h3 class="text-slanted">your bag</h3>
+        </header>
+        <!-- cart producs -->
+        <div class="cart-items">
+          <article class="cart-item" data-id>
+            <img
+              src="../src/assets/main-bcg.jpeg"
+              class="cart-item-img"
+              alt="name"
+            />
+            <!-- item info -->
+            <div>
+              <h4 class="cart-item-name">macys couch</h4>
+              <p class="cart-item-price">$19.99</p>
+              <button class="cart-item-remove-btn">
+                <i class="fas fa-trash"></i>
+              </button>
+            </div>
+            <!-- amount toggle -->
+            <div>
+              <button class="cart-item-decrease-btn">
+                <i class="fas fa-minus"></i>
+              </button>
+              <p class="cart-item-amount">5</p>
+              <button class="cart-item-increase-btn">
+                <i class="fas fa-plus"></i>
+              </button>
+            </div>
+          </article>
+          <!-- end of single item -->
+        </div>
+        <!-- footer -->
+        <footer>
+          <h3 class="cart-total text-slanted">total : $20.00</h3>
+          <button class="cart-checkout btn">checkout</button>
+        </footer>
+      </aside>
+    </div>
+    <!-- About -->
+    <section class="section section-center about-page">
+      <div class="title">
+        <h2>About Us</h2>
+      </div>
+      <p class="about-text">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam
+        accusantium incidunt, labore nulla non tempore perspiciatis hic nisi
+        corrupti eligendi, amet minus corporis fuga magnam veritatis obcaecati
+        temporibus nobis praesentium natus iure. Corporis ex velit sint a, aut,
+        dolorum aperiam delectus nesciunt, commodi reprehenderit omnis saepe
+        neque. Neque corporis natus earum quo velit eaque cumque animi. Quidem
+        incidunt ipsam eius maxime culpa voluptatibus obcaecati fuga voluptas,
+        nobis beatae minima optio.
+      </p>
+    </section>
+
     <script type="module" src="../src/pages/about.js"></script>
   </body>
 </html>
