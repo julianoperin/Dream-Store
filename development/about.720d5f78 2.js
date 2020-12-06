@@ -228,77 +228,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var addToCart = function addToCart() {};
 
 exports.addToCart = addToCart;
-},{"../utils.js":"../src/utils.js","./toggleCart.js":"../src/cart/toggleCart.js","../store.js":"../src/store.js","./addToCartDOM.js":"../src/cart/addToCartDOM.js"}],"../src/displayProducts.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _utils = require("./utils.js");
-
-var _setupCart = require("./cart/setupCart.js");
-
-var display = function display() {};
-
-var _default = display;
-exports.default = _default;
-},{"./utils.js":"../src/utils.js","./cart/setupCart.js":"../src/cart/setupCart.js"}],"../src/filters/search.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _utils = require("../utils.js");
-
-var _displayProducts = _interopRequireDefault(require("../displayProducts.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var setupSearch = function setupSearch() {};
-
-var _default = setupSearch;
-exports.default = _default;
-},{"../utils.js":"../src/utils.js","../displayProducts.js":"../src/displayProducts.js"}],"../src/filters/companies.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _utils = require("../utils.js");
-
-var _displayProducts = _interopRequireDefault(require("../displayProducts.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var setupCompanies = function setupCompanies() {};
-
-var _default = setupCompanies;
-exports.default = _default;
-},{"../utils.js":"../src/utils.js","../displayProducts.js":"../src/displayProducts.js"}],"../src/filters/price.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _utils = require("../utils.js");
-
-var _displayProducts = _interopRequireDefault(require("../displayProducts.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var setupPrice = function setupPrice() {};
-
-var _default = setupPrice;
-exports.default = _default;
-},{"../utils.js":"../src/utils.js","../displayProducts.js":"../src/displayProducts.js"}],"../src/pages/products.js":[function(require,module,exports) {
+},{"../utils.js":"../src/utils.js","./toggleCart.js":"../src/cart/toggleCart.js","../store.js":"../src/store.js","./addToCartDOM.js":"../src/cart/addToCartDOM.js"}],"../src/pages/about.js":[function(require,module,exports) {
 "use strict";
 
 require("../toggleSidebar.js");
@@ -306,21 +236,7 @@ require("../toggleSidebar.js");
 require("../cart/toggleCart.js");
 
 require("../cart/setupCart.js");
-
-var _search = _interopRequireDefault(require("../filters/search.js"));
-
-var _companies = _interopRequireDefault(require("../filters/companies.js"));
-
-var _price = _interopRequireDefault(require("../filters/price.js"));
-
-var _store = require("../store.js");
-
-var _displayProducts = _interopRequireDefault(require("../displayProducts.js"));
-
-var _utils = require("../utils.js");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"../toggleSidebar.js":"../src/toggleSidebar.js","../cart/toggleCart.js":"../src/cart/toggleCart.js","../cart/setupCart.js":"../src/cart/setupCart.js","../filters/search.js":"../src/filters/search.js","../filters/companies.js":"../src/filters/companies.js","../filters/price.js":"../src/filters/price.js","../store.js":"../src/store.js","../displayProducts.js":"../src/displayProducts.js","../utils.js":"../src/utils.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"../toggleSidebar.js":"../src/toggleSidebar.js","../cart/toggleCart.js":"../src/cart/toggleCart.js","../cart/setupCart.js":"../src/cart/setupCart.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -348,7 +264,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65448" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61091" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -524,5 +440,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","../src/pages/products.js"], null)
-//# sourceMappingURL=/products.c5f1ac6f.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","../src/pages/about.js"], null)
+//# sourceMappingURL=/about.720d5f78.js.map
