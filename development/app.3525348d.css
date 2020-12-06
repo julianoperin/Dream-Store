@@ -741,9 +741,9 @@ Sidebar
   height: 100%;
   display: grid;
   place-items: center;
-  z-index: -1;
   transition: var(--transition);
   opacity: 0;
+  z-index: -1;
   background: rgba(0, 0, 0, 0.5);
 }
 

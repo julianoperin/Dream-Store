@@ -363,14 +363,14 @@ Sidebar
   height: 100%;
   display: grid;
   place-items: center;
-  z-index: -1;
   transition: var(--transition);
-  opacity: 0;
+  opacity: 0; // Used to show the mobile view
+  z-index: -1; // Used to show the mobile view
   background: rgba(0, 0, 0, 0.5);
 }
 .sidebar-overlay.show {
-  opacity: 1;
-  z-index: 100;
+  opacity: 1; // Used to show the mobile view
+  z-index: 100; // Used to show the mobile view
 }
 .sidebar {
   width: 80vw;
@@ -429,12 +429,12 @@ Cart
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
   transition: var(--transition);
-  opacity: 0;
-  z-index: -1;
+  opacity: 0; // Used to show the mobile view
+  z-index: -1; // Used to show the mobile view
 }
 .cart-overlay.show {
-  opacity: 1;
-  z-index: 100;
+  opacity: 1; // Used to show the mobile view
+  z-index: 100; // Used to show the mobile view
 }
 .cart {
   position: fixed;
