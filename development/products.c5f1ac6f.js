@@ -170,10 +170,12 @@ var closeBtn = (0, _utils.getElement)(".sidebar-close"); // Open Mobile View
 
 toggleNav.addEventListener("click", function () {
   sidebarOverlay.classList.add("show");
+  toggleNav.classList.add("rotate");
 }); // Close Mobile View
 
 closeBtn.addEventListener("click", function () {
   sidebarOverlay.classList.remove("show");
+  toggleNav.classList.remove("rotate");
 });
 },{"./utils.js":"../src/utils.js"}],"../src/cart/toggleCart.js":[function(require,module,exports) {
 "use strict";
@@ -185,7 +187,26 @@ exports.openCart = void 0;
 
 var _utils = require("../utils.js");
 
-var openCart = function openCart() {};
+// const getElement = (selection) => {
+//     const element = document.querySelector(selection)
+//     if (element) return element
+//     throw new Error(`Please check "${selection}" selector, no such element exist`)
+//   }
+var toggleCartBtn = (0, _utils.getElement)(".toggle-cart");
+var cartOverlay = (0, _utils.getElement)(".cart-overlay");
+var closeCartBtn = (0, _utils.getElement)(".cart-close"); // Open the cart
+
+toggleCartBtn.addEventListener("click", function () {
+  cartOverlay.classList.add("show");
+}); // Close the cart
+
+closeCartBtn.addEventListener("click", function () {
+  cartOverlay.classList.remove("show");
+});
+
+var openCart = function openCart() {
+  cartOverlay.classList.add("show");
+};
 
 exports.openCart = openCart;
 },{"../utils.js":"../src/utils.js"}],"../src/store.js":[function(require,module,exports) {
@@ -365,7 +386,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62554" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53555" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
